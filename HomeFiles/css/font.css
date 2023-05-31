@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'MarkPro-Medium';
+  src: url('fonts/MarkPro-Medium.eot');
+  src: url('fonts/MarkPro-Medium.eot?#iefix') format('embedded-opentype'),
+       url('fonts/MarkPro-Medium.svg#MarkPro-Medium') format('svg'),
+       url('fonts/MarkPro-Medium.ttf') format('truetype'),
+       url('fonts/MarkPro-Medium.woff') format('woff'),
+       url('fonts/MarkPro-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

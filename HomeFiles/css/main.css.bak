@@ -1,0 +1,333 @@
+.kf-updown {position: absolute;animation: up-down 3s infinite ease-in-out;  }
+@keyframes up-down{
+0%{margin-top: 0px;}
+50%{margin-top: -40px;}
+100%{margin-top: 0px;}
+}
+
+@media (max-width:1000px) { 
+   .kf-updown {position: relative; animation: none;}
+ }
+ @media (min-width:990) { 
+}
+
+@media only screen and (min-width: 1200px) {
+  .mt-e90{margin-top:-90px !important;}
+
+}
+ .kf-come-left{animation: come-left 3s ease-in-out; }
+ @keyframes come-left{
+  0%{margin-left: -200vh; opacity: 0;}
+  100%{margin-left: 0px; opacity: 1;}
+  }
+
+
+
+
+  /* Slider */
+  #demo-1 {
+    position: relative; /* can either be relative, absolute or fixed. If position is not set (i.e. static), it would be set to "relative" by script */
+    overflow: hidden; /* to bound the empty top space created by inner element's top margin */
+    width: 100%;
+    min-height: 100vh;
+  }
+  .demo-inner-content {
+    position: relative; /* if position is not set, the script will set it to 'relative'. */
+    z-index: 2; /* if z-index is not set, the script will set it to '2'. */
+    margin: 180px auto;
+    padding: 40px;
+    max-width: 600px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  .demo-inner-content h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+  /* Slider End */
+
+
+.flag-lang{margin-right: 40px;}
+
+@media only screen and (max-width:750px) { 
+ 
+.hide-mobile{display: none !important;}
+.col-lg-6{text-aling:center;}
+}
+
+
+/* Topbar */
+.topnavbar{
+
+  height: 40px;
+  position: absolute;
+  background-color: #00000036;
+  box-shadow: inset 0px 0px 7px 2px #a2a2a2a8;
+  top: 0px;
+  width: 100%;
+  z-index: 1031;
+
+}
+.signbutton{
+
+padding: 12px;
+
+}
+.topnavbarP{
+
+  display: inline-block;
+  margin-right: 5px;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffffe8;
+
+}
+.sign_div {
+
+  margin-top: 8px;
+  float: right;
+  margin-right: 20px;
+
+}
+.SocialMedia_div{
+
+  display: inline-block;
+  float: right;
+  margin-top: 8px;
+  margin-right: 25px;
+
+}
+.SocialMedia_a{
+
+  color: #070f2c;
+  background: #ff4800;
+  border-radius:4px;
+  text-align:center;
+  text-decoration:none;
+  position: relative;
+  display: inline-block;
+  width:40px;
+  height:28px;
+  padding-top:8px;
+  margin:0 2px;
+  -o-transition:all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+   -webkit-font-smoothing: antialiased;
+
+}
+.SocialMedia_a:hover {
+  background: #070f2c;
+  color: #ff4800;
+}
+.contact_div{
+
+  display: inline-block;
+  margin-top: 8px;
+  float: left;
+  margin-left: 31px;
+  color: #00c9db;
+  font-size: 17px;
+
+}
+.contact_div a{
+
+text-decoration: none;
+margin-left: 10px;
+font-family: serif;
+font-weight: bold;
+color: white;
+
+}
+.mobile-sign{
+
+display: none;
+
+}
+
+/* end Topbar */
+
+@media only screen and (max-width: 700px) {
+  .w120{width: 100%;}
+
+}
+
+@media only screen and (max-width: 800px) {
+  .contact_div{
+
+    font-size: 15px;
+  
+  }
+}
+@media only screen and (max-width: 870px) {
+.flag-lang{
+  margin-right: 0px;
+  }
+.navbar-custom{
+  font: 0.8rem "Montserrat", sans-serif;
+}.navbar-custom .dropdown-menu {
+	margin-left: -100px;
+}
+}
+
+@media only screen and (max-width: 900px) {
+  .contact_div{
+    
+    font-size: 15px;
+
+  }
+}
+@media only screen and (max-width: 767px) {
+  .topnavbar{
+  
+    display: none;
+
+  }
+  .mobile-sign{
+
+    display: block;
+    
+    }
+    .mobile-container{
+
+      margin-top: 20px; 
+
+    }
+    .navbar-custom{
+
+      font: 1rem/2rem "Montserrat", sans-serif;
+      
+    }
+    .header .header-content {
+
+      padding-bottom: 1rem;
+      
+  }
+}
+
+.QR_demo_img{
+
+  height: 250px;
+  width: 250px;
+  border: 5px solid #f8f6e6;
+  box-shadow: 11px 12px #02020285;
+
+}
+
+button:focus{
+  outline: 0 !important;
+}
+.cookie{
+  display: none;
+}
+.Cookie_message {
+  display: block !important;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  z-index: 1029;
+}.cookie-btn{
+
+    display: inline-block;
+    border: 0.125rem solid #337ab7;
+    border-radius: 2rem;
+    background-color: #337ab7;
+    color: #fff !important;
+    font: 700 0.75rem/0 "Montserrat", sans-serif;
+    text-decoration: none;
+    transition: all 0.2s;
+    padding: 15px;
+    cursor: pointer;
+
+}.cookie-btn:hover{
+
+  background-color: transparent;
+  color: #337ab7 !important;
+
+}.cookie_a{
+  text-decoration: none; 
+  font-weight: bolder; 
+  color: #e01b1b; 
+  border: 2px dotted #ff000042; 
+  cursor: pointer;
+}.cookie_a:hover{
+  text-decoration: none; 
+border-color: darkblue;
+}.cookie-content{
+  display: inline-block;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 360px) {
+  .cookie-btn{
+
+    margin-top: 10px;
+
+  }.Cookie_message {
+    padding: 1rem 1rem 0rem 1rem;
+  }
+}
+.succed-message-color{
+
+  color: rgb(0, 160, 0) !important;
+
+}
+.error-message-color{
+
+  color: rgb(110, 2, 2) !important;
+  
+  }
+  .Made-in{
+
+    display: inline-block;
+    position: absolute;
+    right: 150px;
+    margin-top: -50px;
+}
+.Made-in img {
+
+    height: 180px;
+    width: 200px;
+
+  }
+  @media only screen and (max-width:  1200px){
+    .Made-in{
+  
+    right: 40px;
+    margin-top: -100px;
+  
+      }
+    }
+  @media only screen and (max-width:  945px){
+  .Made-in img{
+
+    height: 150px;
+    width: 170px;
+
+    }
+  } @media only screen and (max-width: 600px){
+
+    .Made-in img{
+    height: 130px;
+    width: 150px;
+    }
+  }  
+  
+  @media only screen and (max-width:  467px){
+    .Made-in{
+
+      right: 10px;
+  
+    }
+    .Made-in img {
+  
+      height: 100px;
+      width: 125px;
+
+    }
+  }

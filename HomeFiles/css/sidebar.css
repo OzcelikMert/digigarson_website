@@ -1,0 +1,283 @@
+:root {
+
+  --sidebar-width: 100%;
+
+  --toggler-size: 30px;
+
+  --toggler-line-number: 3;
+
+  --toggler-line-size: calc(var(--toggler-size) / (var(--toggler-line-number) + var(--toggler-line-number) - 1));
+
+  --toggler-offset-right: 10px;
+
+  --toggler-offset-top: 10px;
+
+  --toggler-color: #1d1d1d;
+
+  --toggler-color-hover: Wheat;
+
+}
+
+/* red: #e21e26 | black: #1d1d1d; */
+
+.sidebar {
+
+  transition: all 0.5s ease-out;
+
+}
+
+
+
+.sidebar {
+
+  width: var(--sidebar-width);
+
+  -webkit-transform: translateX(calc(var(--sidebar-width) * -1));
+
+          transform: translateX(calc(var(--sidebar-width) * -1));
+
+  background: linear-gradient(to bottom right, #e21e26, #1d1d1d);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  position: absolute;
+
+  top: 0;
+
+  height: 100vh;
+
+  opacity: 0;
+
+}
+
+
+
+.menu {
+
+  list-style-type: none;
+
+  padding: 0px 25px;
+
+}
+
+
+
+.menu__link {
+
+  color: white;
+
+  font-weight: 100;
+
+  text-decoration: none;
+
+  font-size: 10vmin;
+
+  line-height: 15vmin;
+
+  transition: all .25s ease-out;
+
+}
+
+.menu__link:hover, .menu__link:focus, .menu__link:active {
+
+  color: Gold;
+
+}
+
+
+
+.menu-toggler {
+
+  border-radius: calc(var(--toggler-line-size) / 2);
+
+  display: none;
+
+  width: var(--toggler-size);
+
+  height: var(--toggler-size);
+
+  position: fixed;
+
+ /* top: var(--toggler-offset-top);*/
+
+  right: var(--toggler-offset-right);
+
+  cursor: pointer;
+
+  z-index: 1;
+
+}
+
+
+
+.menu-toggler__line {
+
+  box-shadow: -1px 2px #e21e266b;
+
+  height: var(--toggler-line-size);
+
+  background: var(--toggler-color);
+
+  position: absolute;
+
+  border-radius: calc(var(--toggler-line-size) / 2);
+
+  left: 0;
+
+  right: 0;
+
+  transition: all .25s ease-out;
+
+}
+
+.menu-toggler__line:nth-child(1) {
+
+  top: calc(var(--toggler-line-size) * 1 + (var(--toggler-line-size) * (1 - 2)));
+
+}
+
+.menu-toggler__line:nth-child(2) {
+
+  top: calc(var(--toggler-line-size) * 2 + (var(--toggler-line-size) * (2 - 2)));
+
+}
+
+.menu-toggler__line:nth-child(3) {
+
+  top: calc(var(--toggler-line-size) * 3 + (var(--toggler-line-size) * (3 - 2)));
+
+}
+
+
+
+.input-toggler {
+
+  position: absolute;
+
+  right: -100%;
+
+}
+
+.input-toggler:focus ~ .menu-toggler {
+
+  outline: 1px dotted;
+
+}
+
+.input-toggler:checked ~ .menu-toggler .menu-toggler__line:not(:first-child):not(:last-child) {
+
+  opacity: 0;
+
+}
+
+.input-toggler:checked ~ .menu-toggler .menu-toggler__line:first-child,
+
+.input-toggler:checked ~ .menu-toggler .menu-toggler__line:last-child {
+
+  background-color: var(--toggler-color-hover);
+
+}
+
+.input-toggler:checked ~ .menu-toggler .menu-toggler__line:first-child {
+
+  -webkit-transform: translateY(calc(var(--toggler-line-size) * (var(--toggler-line-number) - 1))) rotate(45deg);
+
+          transform: translateY(calc(var(--toggler-line-size) * (var(--toggler-line-number) - 1))) rotate(45deg);
+
+}
+
+.input-toggler:checked ~ .menu-toggler .menu-toggler__line:last-child {
+
+  -webkit-transform: translateY(calc(-1 * var(--toggler-line-size) * (var(--toggler-line-number) - 1))) rotate(-45deg);
+
+          transform: translateY(calc(-1 * var(--toggler-line-size) * (var(--toggler-line-number) - 1))) rotate(-45deg);
+
+}
+
+.input-toggler:checked ~ .sidebar {
+
+  -webkit-transform: translateX(0);
+
+          transform: translateX(0);
+
+  opacity: .98;
+
+}
+
+
+
+.wrapper {
+
+  height: calc(100vh - 50px);
+
+}
+
+
+
+.sb-link {
+
+  display: flex;
+
+  height: 50px;
+
+  align-content: center;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-decoration: none;
+
+  color: #bb5555;
+
+  transition: background-color .3s;
+
+}
+
+
+
+.sb-link:hover,
+
+.sb-link:focus,
+
+.sb-link:active {
+
+  background: #f7f7f7;
+
+}
+
+.padding-left-0{
+
+
+
+padding-left: 0px !important;
+
+
+
+}.signbutton-sidebar{
+
+
+
+  position: absolute;
+
+  top: 27px;
+
+
+
+}
+
+
+
+@media only screen and (max-width: 767px){
+
+
+
+  .menu-toggler { display: block; }
+
+  .signbutton { display: none !important; }
+
+}

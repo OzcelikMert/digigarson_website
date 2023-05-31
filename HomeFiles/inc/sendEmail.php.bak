@@ -1,0 +1,92 @@
+﻿<?php
+
+
+
+// Replace this with your own email address
+
+$siteOwnersEmail = "info@digigarson.com.tr";
+
+$email="";
+
+$name="";
+
+
+
+function mailgonder($kime, $mesaj){
+
+include 'class.phpmailer.php';
+
+$mail = new PHPMailer();
+
+$mail->IsSMTP();
+
+$mail->SMTPAuth = true;
+
+$mail->Host = 'mail.digigarson.com.tr';
+
+$mail->Port = 465;
+
+$mail->SMTPSecure = 'ssl';
+
+
+    $mail->Username = "info@digigarson.com.tr";
+    $mail->Password = "Nightwolf7072@";
+
+$mail->SetFrom("info@digigarson.com.tr");
+
+$mail->AddAddress("info@digigarson.com.tr");
+$mail->Subject = "contacts";
+$mail->CharSet = 'UTF-8';
+
+$content = $mesaj;
+
+$mail->MsgHTML($content);
+
+if($mail->Send()) {
+
+ echo "success"; 
+
+} else {
+
+   echo "<script> alert('Birşeyler yanlış gitti. Lütfen tekrar deneyiniz.');</script>"; 
+
+    echo $mail->ErrorInfo;
+
+}
+
+}
+
+if($_POST) {
+
+    $name = trim(stripslashes($_POST['name']));
+
+    $email = trim(stripslashes($_POST['email']));
+
+    $contact_message = trim(stripslashes($_POST['message']));
+
+    $terms = trim(stripslashes($_POST['terms']));
+
+    if(isset($name) && isset($email) && isset($contact_message) && isset($terms)){
+    // Set Message
+    $message  = "Gönderen İsimi: " . $name . "<br />";
+    $message .= "Email adresi: " . $email . "<br />";
+    $message .= "WebSite Contact Form <hr>";
+    $message .= "Mesajı: <br />";
+    $message .= $contact_message;
+
+
+    mailgonder($siteOwnersEmail, $message);
+
+
+    }else{
+
+        echo "<script>alert('Lütfen gerekli yerleri doldurunuz.!');</script>"; 
+
+    }
+
+
+}
+
+
+
+?>
